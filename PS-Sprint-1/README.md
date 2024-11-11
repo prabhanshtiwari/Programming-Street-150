@@ -11,10 +11,10 @@
    ```python
    
     def checkEvenOdd(number) :
-    if(number % 2 == 0):    #checking if the remainder is equal to zero i.e. 0 when number is divided by 2
-        return "Even"
-    else:
-        return "Odd"
+        if(number % 2 == 0):    #checking if the remainder is equal to zero i.e. 0 when number is divided by 2
+            return "Even"
+        else:
+            return "Odd"
 
     number = int(input("number = "))    #taking input
     print(checkEvenOdd(number))     # calling the function to show output
@@ -98,6 +98,21 @@
    Input: `number = 1234`  
    Output: `10`  
    Explanation: The sum of the digits 1 + 2 + 3 + 4 = 10.  
+   **Solution**
+
+   ```python
+   
+  def sumDigits(number):
+    sum = 0
+    while (number != 0):
+        remainder = number % 10     # finding the last digits
+        sum = sum + remainder       # adding the last digit in sum
+        number //= 10               # Dropping the last digit of the number
+    return sum
+    
+number = int(input("number = "))
+print(sumDigits(number))
+   ```
 
 10. **Finding the Greatest Common Divisor (GCD)**  
     **Difficulty**: Easy  
