@@ -6,6 +6,19 @@
    Input: `number = 4`  
    Output: `Even`  
    Explanation: Since 4 is divisible by 2, it is an even number.  
+   **Solution**
+
+   ```python
+   
+    def checkEvenOdd(number) :
+    if(number % 2 == 0):    #checking if the remainder is equal to zero i.e. 0 when number is divided by 2
+        return "Even"
+    else:
+        return "Odd"
+
+    number = int(input("number = "))    #taking input
+    print(checkEvenOdd(number))     # calling the function to show output
+   ```
 
 2. **Checking for Prime Numbers**  
    **Difficulty**: Easy  
