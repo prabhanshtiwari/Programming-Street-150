@@ -29,6 +29,29 @@ print(checkEvenOdd(number))     # calling the function to show output
    Output: `Prime`  
    Explanation: 7 has no divisors other than 1 and itself, so it is a prime number.
 
+```python 
+
+def checkPrime(number):
+    count = 0
+    for i in range(1, (int(number ** 0.5))+ 1):
+        if (number % i == 0):
+            count = count + 1
+            if (number/i != i): # other divisor
+                count = count + 1
+        if (count > 2):
+            break        
+    if (count == 2):
+        return "Prime"
+    else: 
+        return "Not Prime"
+    
+
+number = int(input("number = "))
+result = checkPrime(number)
+print(result)
+
+```
+
 3. **Validating Leap Years**  
    **Difficulty**: Easy  
    **Topics**: Basic Programming, Date Handling  
@@ -46,6 +69,27 @@ print(checkEvenOdd(number))     # calling the function to show output
    Input: `number = 153`  
    Output: `Armstrong Number`  
    Explanation: 153 is an Armstrong number because 1^3 + 5^3 + 3^3 = 153.
+
+```python
+
+def checkArmstrong(number):
+    sum = 0
+    temp = number
+    order = len(str(number))
+    while (number != 0):
+        last_digit = number % 10     # finding the last digits
+        sum = sum + last_digit ** order       # adding the last digit**order  in sum
+        number //= 10               # Dropping the last digit of the number
+        
+    if (temp == sum):
+        return "Armstrong Number"
+    else:
+        return "Not Armstrong Number"
+    
+number = int(input("number = "))
+print(checkArmstrong(number))
+
+```
 
 5. **Generating the Fibonacci Series**  
    **Difficulty**: Easy  
@@ -91,6 +135,20 @@ print(checkEvenOdd(number))     # calling the function to show output
    Input: `number = 5`  
    Output: `120`  
    Explanation: 5! (factorial) is 5 × 4 × 3 × 2 × 1 = 120.
+
+```python
+
+def factorial(number):
+    fact = 1
+    for i in range(1, number + 1):
+        fact = fact * i
+    
+    return fact
+
+number = int(input("number = "))
+print(factorial(number))
+
+```
 
 9. **Summing Digits of a Number**  
    **Difficulty**: Easy  
