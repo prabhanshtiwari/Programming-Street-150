@@ -1,25 +1,22 @@
-# Write a program to determine if a number is prime.  
+# Write a program to check if a given year is a leap year.  
 """
-    Input: `number = 7`  
-    Output: `Prime`  
-    Explanation: 7 has no divisors other than 1 and itself, so it is a prime number.
+    Input: `year = 2020`  
+   Output: `Leap Year`  
+   Explanation: 2020 is divisible by 4 but not by 100, or it is divisible by 400, so it is a leap year.
 """
 
-def checkPrime(number):
-    count = 0
-    for i in range(1, (int(number ** 0.5))+ 1):
-        if (number % i == 0):
-            count = count + 1
-            if (number/i != i): # other divisor
-                count = count + 1
-        if (count > 2):
-            break        
-    if (count == 2):
-        return "Prime"
-    else: 
-        return "Not Prime"
+def checkLeapYear(year):
+    if (year % 4 == 0): # if year is divisible by 4, then it is either century year or leap year
+        if (year % 100 == 0):   # checking if it is a century year or not
+            if (year % 400 == 0):    # century year is leap year only if it is divisible by 400
+                return "Leap Year" 
+            else:
+                return "Not Leap Year"
+        else:
+            return "Leap Year"  # if any year is divisible by 4 and it is not a century year, then it is lep year
+    else:
+        return "Not Leap Year"  # if any year is not divisible by 4, then it is not a leap year
     
-
-number = int(input("number = "))
-result = checkPrime(number)
+year = int(input("year = "))
+result = checkLeapYear(year)
 print(result)
