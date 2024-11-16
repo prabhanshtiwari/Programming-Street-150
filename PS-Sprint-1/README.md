@@ -61,6 +61,26 @@ print(result)
    Output: `Leap Year`  
    Explanation: 2020 is divisible by 4 but not by 100, or it is divisible by 400, so it is a leap year.
 
+```python 
+
+def checkLeapYear(year):
+    if year % 4 == 0:  # if year is divisible by 4, it could be a leap year
+        if year % 100 == 0:  # if it's a century year
+            if year % 400 == 0:  # century year must be divisible by 400 to be a leap year
+                return "Leap Year"
+            else:
+                return "Not Leap Year"
+        else:
+            return "Leap Year"  # non-century years divisible by 4 are leap years
+    else:
+        return "Not Leap Year"  # not divisible by 4, so not a leap year
+
+# Taking user input and printing the result
+year = int(input("Enter a year: "))
+print(checkLeapYear(year))
+
+```
+
 4. **Calculating Armstrong Numbers**  
    **Difficulty**: Easy  
    **Topics**: Basic Programming, Number Theory  
