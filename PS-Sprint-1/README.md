@@ -120,6 +120,25 @@ print(checkArmstrong(number))
    Output: `[0, 1, 1, 2, 3, 5, 8]`  
    Explanation: The Fibonacci series up to 10 is generated as [0, 1, 1, 2, 3, 5, 8].
 
+```python
+
+def fibonacciSeries(number):
+    f0 = 0
+    f1 = 1
+    fn = f0 + f1
+
+    while (fn < number):
+        print(fn, end = " ")
+        f0 = f1
+        f1 = fn
+        fn = f0 + f1
+
+number = int(input("Enter the limit in numeric format: "))
+print("Fibonacci Series")
+fibonacciSeries(number)
+
+```
+
 6. **Identifying Palindromes**  
    **Difficulty**: Easy  
    **Topics**: Basic Programming, String Manipulation  
