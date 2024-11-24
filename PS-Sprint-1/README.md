@@ -283,13 +283,27 @@ else:
 ```
 
 13. **Reversing a String**  
- **Difficulty**: Easy  
- **Topics**: Basic Programming, String Manipulation  
- **Description**: Write a program to reverse a given string.  
- **Example**:  
- Input: `string = "programming"`  
- Output: `"gnimmargorp"`  
- Explanation: The reversed string of "programming" is "gnimmargorp".  
+     **Difficulty**: Easy  
+    **Topics**: Basic Programming, String Manipulation  
+     **Description**: Write a program to reverse a given string.  
+     **Example**:  
+     Input: `string = "programming"`  
+    Output: `"gnimmargorp"`  
+    Explanation: The reversed string of "programming" is "gnimmargorp".  
+
+```python
+
+def reverseString(string):
+    reverse_string = ""
+    for i in string:
+        reverse_string = i + reverse_string
+    return reverse_string
+
+string = "aprogramming"
+result = reverseString(string)
+print(result)
+
+```
 
 14. **Finding the Largest and Smallest Numbers in an Array**  
     **Difficulty**: Easy  

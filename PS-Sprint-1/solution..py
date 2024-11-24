@@ -1,14 +1,12 @@
-# Write a program to find the largest and smallest numbers in an array.
+# Write a program to reverse a given string.  
 
-def checkLargestAndSmallest(array):
-    largest = smallest = array[0]
-    for i in range(0, len(array) - 1):
-        if array[i] > largest:
-            largest = array[i]
-        if array[i] < smallest:
-            smallest = array[i]
-    return largest, smallest
 
-array = [4, 7, 1, 8, 5]
-result = checkLargestAndSmallest(array)
-print("Lasgest:", result[0], "Smallest:", result[1])
+def reverseString(string):
+    reverse_string = ""
+    for i in string:
+        reverse_string = i + reverse_string
+    return reverse_string
+
+string = "aprogramming"
+result = reverseString(string)
+print(result)
