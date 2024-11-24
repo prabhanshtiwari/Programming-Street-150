@@ -291,14 +291,32 @@ else:
  Output: `"gnimmargorp"`  
  Explanation: The reversed string of "programming" is "gnimmargorp".  
 
-14. **Finding the Largest and Smallest Numbers in an Array**
- **Difficulty**: Easy
- **Topics**: Basic Programming, Arrays
- **Description**: Write a program to find the largest and smallest numbers in an array.
- **Example**:
- Input: `array = [4, 7, 1, 8, 5]`
- Output: `Largest: 8, Smallest: 1`
- Explanation: The largest number in the array is 8 and the smallest is 1.
+14. **Finding the Largest and Smallest Numbers in an Array**  
+    **Difficulty**: Easy  
+    **Topics**: Basic Programming, Arrays  
+    **Description**: Write a program to find the largest and smallest numbers in an array.  
+    **Example**:  
+    Input: `array = [4, 7, 1, 8, 5]`  
+    Output: `Largest: 8, Smallest: 1`  
+    Explanation: The largest number in the array is 8 and the smallest is 1.  
+
+```python
+
+def checkLargestAndSmallest(array):
+    largest = smallest = array[0]
+    for i in range(0, len(array) - 1):
+        if array[i] > largest:
+            largest = array[i]
+        if array[i] < smallest:
+            smallest = array[i]
+    return largest, smallest
+
+array = [4, 7, 1, 8, 5]
+result = checkLargestAndSmallest(array)
+print("Lasgest:", result[0], "Smallest:", result[1])
+
+```
+
 
 15. **Sorting an Array**
  **Difficulty**: Easy
