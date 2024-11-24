@@ -247,18 +247,19 @@ print(sumDigits(number))
  Explanation: The LCM of 12 and 15 is 60.
 
 12. **Counting Vowels and Consonants in a String**
- **Difficulty**: Easy
- **Topics**: Basic Programming, String Manipulation
- **Description**: Write a program to count vowels and consonants in a given string.
- **Example**:
- Input: `string = "hello world"`
- Output: `Vowels: 3, Consonants: 7`
- Explanation: "hello world" contains 3 vowels (e, o, o) and 7 consonants (h, l, l, w, r, l, d).
+    **Difficulty**: Easy
+    **Topics**: Basic Programming, String Manipulation
+    **Description**: Write a program to count vowels and consonants in a given string.
+    **Example**:
+    Input: `string = "hello world"`
+    Output: `Vowels: 3, Consonants: 7`
+    Explanation: "hello world" contains 3 vowels (e, o, o) and 7 consonants (h, l, l, w, r, l, d).
 
  ```python
 
  def countVowelsConsonants(str):
     if str.isalpha():
+        str = str.lower()
         vowel = 0
         consonant = 0
         vowelList = ["a", "e", "i", "o", "u"]

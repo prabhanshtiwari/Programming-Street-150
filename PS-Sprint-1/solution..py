@@ -1,6 +1,7 @@
 #  Write a program to count vowels and consonants in a given string.
 def countVowelsConsonants(str):
     if str.isalpha():
+        str = str.lower()
         vowel = 0
         consonant = 0
         vowelList = ["a", "e", "i", "o", "u"]
