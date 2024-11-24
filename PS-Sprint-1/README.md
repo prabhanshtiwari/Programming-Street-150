@@ -148,6 +148,20 @@ fibonacciSeries(number)
    Output: `Palindrome`  
    Explanation: "radar" reads the same backward as forward.
 
+```python
+
+def checkPalindrome(str):
+    if (str == str[::-1]):
+        return "Palindrome"
+    else:
+        return "Not Palindrome"
+
+str = input("string/number = ")
+result = checkPalindrome(str)
+print(result)
+
+```
+
 7. **Crafting Star Patterns**  
    **Difficulty**: Easy  
    **Topics**: Basic Programming, Patterns  
