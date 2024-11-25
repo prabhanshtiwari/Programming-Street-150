@@ -1,12 +1,12 @@
-# Write a program to find the second largest number in an array.
+# Write a program to generate a pyramid of numbers (e.g., 1, 12, 123, etc.).
 
-def findSecondLargestNumber(array):
-    if (len(array) < 2):
-        return "Array must contain atleast two elements"
-    sorted_array = sorted(set(array))    # sort in ascending order
-    secondLargstNumber = sorted_array[-2]
-    return secondLargstNumber
 
-array = [11]
-result = findSecondLargestNumber(array)
-print(result)
+    
+def pyramidOfNumbers(rows):
+    for i in range(1, rows + 1):
+        for j in range(1, i + 1):
+            print(j, end = "")
+        print()
+        
+rows = int(input("rows = "))
+pyramidOfNumbers(rows)
