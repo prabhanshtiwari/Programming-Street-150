@@ -384,14 +384,36 @@ print("Lasgest:", result[0], "Smallest:", result[1])
  Output: `[11, 13, 17, 19, 23, 29]`
  Explanation: Prime numbers between 10 and 30 are 11, 13, 17, 19, 23, and 29.
 
-20. **Checking for Perfect Numbers**
- **Difficulty**: Easy
- **Topics**: Basic Programming, Number Theory
- **Description**: Write a program to determine if a number is a perfect number.
- **Example**:
- Input: `number = 28`
- Output: `Perfect Number`
- Explanation: 28 is a perfect number because its divisors (1, 2, 4, 7, 14) sum up to 28.
+20. **Checking for Perfect Numbers**  
+ **Difficulty**: Easy  
+ **Topics**: Basic Programming, Number Theory  
+ **Description**: Write a program to determine if a number is a perfect number.  
+ **Example**:  
+ Input: `number = 28`  
+ Output: `Perfect Number`  
+ Explanation: 28 is a perfect number because its divisors (1, 2, 4, 7, 14) sum up to 28.  
+
+ ```python
+
+ def checkPerfectNumber(number):
+    
+    if (number <= 1):
+        return "No perfect numbers below 2"
+    
+    sum = 0
+    for i in range(1, number):
+        if (number % i == 0):
+            sum = sum + i
+    if (sum == number):
+        return "Perfect Number"
+    else:
+        return "Not Perfect Number"
+
+number = int(input("number = "))
+result = checkPerfectNumber(number)
+print(result)
+
+```
 
 21. **Calculating the Sum of Even Numbers in a Range**
  **Difficulty**: Easy
