@@ -1,11 +1,8 @@
-# Write a program to determine the length of a string without using built-in functions.
+# Write a program to generate multiplication tables for a given number.
 
-def lengthOfString(string):
-    count = 0
-    for _ in string:
-        count += 1
-    return count
-
-string = input("string = ")
-result = lengthOfString(string)
-print(result)
+def generateMultiplicationTable(number):
+    for i in range(1, 11):
+        print(number, "x", i, "=", number * i)
+        
+number = int(input("number = "))
+generateMultiplicationTable(number)
