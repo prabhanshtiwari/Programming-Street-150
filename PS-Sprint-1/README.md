@@ -689,14 +689,29 @@ print(result)
  Output: `5`
  Explanation: The prime factors of 12 are 2 and 3, and their sum is 2 + 3 = 5.
 
-49. **Finding the Second Largest Number in an Array**
- **Difficulty**: Medium
- **Topics**: Arrays, Sorting
- **Description**: Write a program to find the second largest number in an array.
- **Example**:
- Input: `array = [10, 20, 4, 45, 99]`
- Output: `45`
- Explanation: The second largest number in the array is 45.
+49. **Finding the Second Largest Number in an Array**  
+ **Difficulty**: Medium  
+ **Topics**: Arrays, Sorting  
+ **Description**: Write a program to find the second largest number in an array.  
+ **Example**:  
+ Input: `array = [10, 20, 4, 45, 99]`  
+ Output: `45`  
+ Explanation: The second largest number in the array is 45.  
+
+ ```python
+
+ def findSecondLargestNumber(array):
+    if (len(array) < 2):
+        return "Array must contain atleast two elements"
+    sorted_array = sorted(set(array))    # sort in ascending order
+    secondLargstNumber = sorted_array[-2]
+    return secondLargstNumber
+
+array = [11]
+result = findSecondLargestNumber(array)
+print(result)
+
+```
 
 50. **Finding the Longest Substring Without Repeating Characters**
  **Difficulty**: Medium

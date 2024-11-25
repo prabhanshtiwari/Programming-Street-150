@@ -1,19 +1,12 @@
-#  Write a program to determine if a number is a perfect number.
+# Write a program to find the second largest number in an array.
 
-def checkPerfectNumber(number):
-    
-    if (number <= 1):
-        return "No perfect numbers below 2"
-    
-    sum = 0
-    for i in range(1, number):
-        if (number % i == 0):
-            sum = sum + i
-    if (sum == number):
-        return "Perfect Number"
-    else:
-        return "Not Perfect Number"
+def findSecondLargestNumber(array):
+    if (len(array) < 2):
+        return "Array must contain atleast two elements"
+    sorted_array = sorted(set(array))    # sort in ascending order
+    secondLargstNumber = sorted_array[-2]
+    return secondLargstNumber
 
-number = int(input("number = "))
-result = checkPerfectNumber(number)
+array = [11]
+result = findSecondLargestNumber(array)
 print(result)
