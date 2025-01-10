@@ -625,6 +625,7 @@ print(result)
 
  ```python
  def sumOFSqauresOfDigits(number):
+    number = abs(number)
     total_sum = 0
     if number == 0:
         return 0
