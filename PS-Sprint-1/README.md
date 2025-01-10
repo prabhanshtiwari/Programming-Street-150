@@ -623,6 +623,22 @@ print(result)
  Output: `14`
  Explanation: The sum of the squares of digits is 1^2 + 2^2 + 3^2 = 14.
 
+ ```python
+ def sumOFSqauresOfDigits(number):
+    total_sum = 0
+    if number == 0:
+        return 0
+    while number > 0:
+        digit = number % 10;
+        total_sum = total_sum + (digit ** 2)
+        number = number // 10
+    return total_sum
+
+number = int(input("number = "))
+result = sumOFSqauresOfDigits(number)
+print(result)
+```
+
 39. **Generating a Square Matrix of a Given Size**
  **Difficulty**: Medium
  **Topics**: Arrays, Matrix Operations
