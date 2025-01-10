@@ -601,6 +601,19 @@ print(result)
  Output: `True`
  Explanation: 16 is a perfect square (4^2 = 16).
 
+ ```python
+ def checkPerfectSquare(number):
+    sqrt = int(number ** 0.5)
+    if (sqrt * sqrt) == number:
+        return True
+    else:
+        return False
+
+number = int(input("number = "))
+result = checkPerfectSquare(number)
+print(result)
+```
+
 38. **Finding the Sum of Squares of Digits**
  **Difficulty**: Easy
  **Topics**: Basic Programming, Mathematical Computations

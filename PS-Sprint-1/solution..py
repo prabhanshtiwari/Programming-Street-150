@@ -1,8 +1,10 @@
-def powerOfNumber(base, exponent):
-    result = base ** exponent
-    return result;
+def checkPerfectSquare(number):
+    sqrt = int(number ** 0.5)
+    if (sqrt * sqrt) == number:
+        return True
+    else:
+        return False
 
-base = int(input("base = "))
-exponent = int(input("exponent = "))
-result = powerOfNumber(base, exponent)
+number = int(input("number = "))
+result = checkPerfectSquare(number)
 print(result)
