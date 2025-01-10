@@ -1,8 +1,8 @@
-# Write a program to generate multiplication tables for a given number.
+def powerOfNumber(base, exponent):
+    result = base ** exponent
+    return result;
 
-def generateMultiplicationTable(number):
-    for i in range(1, 11):
-        print(number, "x", i, "=", number * i)
-        
-number = int(input("number = "))
-generateMultiplicationTable(number)
+base = int(input("base = "))
+exponent = int(input("exponent = "))
+result = powerOfNumber(base, exponent)
+print(result)
