@@ -592,6 +592,16 @@ print(result)
  Output: `10`
  Explanation: The 4th triangular number is 10 (sum of the first 4 natural numbers).
 
+ ```python
+ def nthTriangularNumber(number):
+    result = (number * (number + 1))//2
+    return result
+
+N = int(input("N = "))
+result = nthTriangularNumber(N)
+print(result)
+```
+
 37. **Checking for Perfect Squares**
  **Difficulty**: Easy
  **Topics**: Mathematical Computations
@@ -698,6 +708,20 @@ print(result)
  Input: `array = [1, 2, 3, 4, 5]`
  Output: `3`
  Explanation: The average of the numbers is (1 + 2 + 3 + 4 + 5) / 5 = 3.
+
+ ```python
+ def avfOfArray(array):
+    total_sum = 0
+    avg = 0
+    for i in range(len(array)):
+        total_sum += array[i]
+    avg = total_sum / len(array)
+    return avg
+
+array = [1, 2, 3, 4, 5, 6]
+result = avfOfArray(array)
+print(result)
+```
 
 45. **Finding the Mode of Numbers in an Array**
  **Difficulty**: Medium

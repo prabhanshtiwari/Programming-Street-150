@@ -13,6 +13,15 @@
 ****
 ```
 
+```python 
+def printingPattern(n):
+    for i in range(1, n + 1):
+        print("*" * i)
+
+n = int(input("n = "))
+printingPattern(n)
+```
+
 ---
 
 ### **Problem 2: Print a Square of Stars**
