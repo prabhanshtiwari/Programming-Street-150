@@ -554,6 +554,17 @@ print(result)
  Output: `8`
  Explanation: 2 raised to the power of 3 is 8.
 
+ ```python
+ def powerOfNumber(base, exponent):
+    result = base ** exponent
+    return result;
+
+base = int(input("base = "))
+exponent = int(input("exponent = "))
+result = powerOfNumber(base, exponent)
+print(result)
+```
+
 34. **Checking for an Anagram**
  **Difficulty**: Easy
  **Topics**: String Manipulation
