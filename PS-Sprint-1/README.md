@@ -502,14 +502,14 @@ print(result)
     Output: `2, 3, 5, 7, 11, 13, 17, 19`
     Explanation: The prime numbers less than 20 are 2, 3, 5, 7, 11, 13, 17, and 19.
 
-25. **Finding the Number of Digits in a Number**
-    **Difficulty**: Easy
-    **Topics**: Basic Programming, Mathematical Computations
-    **Description**: Write a program to count the number of digits in a given number.
-    **Example**:
-    Input: `number = 12345`
-    Output: `5`
-    Explanation: The number 12345 has 5 digits.
+25. **Finding the Number of Digits in a Number** 
+    **Difficulty**: Easy 
+    **Topics**: Basic Programming, Mathematical Computations 
+    **Description**: Write a program to count the number of digits in a given number. 
+    **Example**: 
+    Input: `number = 12345` 
+    Output: `5` 
+    Explanation: The number 12345 has 5 digits. 
 
 ```python
 def numberOfDigits(number):
