@@ -350,6 +350,18 @@ print("Lasgest:", result[0], "Smallest:", result[1])
  Output: `15`
  Explanation: The sum of the elements in the array is 15.
 
+ ```python
+ def sumOfElements(array):
+    sum = 0
+    for i in range(len(array)):
+        sum += array[i]
+    return sum
+
+array = [1, 2, 3, 4, 5]
+result = sumOfElements(array)
+print(result)
+```
+
 17. **Checking for Armstrong Numbers in a Range**
  **Difficulty**: Easy
  **Topics**: Basic Programming, Number Theory
