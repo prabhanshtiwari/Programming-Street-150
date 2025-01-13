@@ -510,6 +510,28 @@ print(result)
  Output: `5`
  Explanation: The number 12345 has 5 digits.
 
+ ```python
+def numberOfDigits(number):
+    count = 0
+    while(number > 0):
+        count += 1
+        number = number // 10
+    return count
+
+number = 1254
+result = numberOfDigits(number)
+print(result)
+```
+
+```python
+def numberOfDigits(number):
+    return len(str(number))
+
+number = 12345
+result = numberOfDigits(number)
+print(result)
+```
+
 26. **Checking if a Number is a Narcissistic Number**
  **Difficulty**: Easy
  **Topics**: Basic Programming, Number Theory
