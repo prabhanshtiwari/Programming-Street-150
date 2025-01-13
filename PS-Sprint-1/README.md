@@ -371,6 +371,33 @@ print(result)
  Output: `[1, 153, 370, 371, 407]`
  Explanation: Armstrong numbers between 1 and 500 are 1, 153, 370, 371, and 407.
 
+```python
+def checkArmstrong(num):
+        temp = num
+        sum = 0
+        while (num > 0):
+            lastDigit = num % 10
+            sum = sum + (lastDigit ** 3)
+            num = num // 10
+        if (temp == sum):
+            return True
+        else:
+            return False
+        
+def armstrongNumberInRange(num_range):
+    start = num_range[0]
+    end = num_range[1]
+    numList = []
+    for i in range(start, end + 1):
+        if (checkArmstrong(i)):
+            numList.append(i)
+    return numList
+
+num_range = [1, 500]
+result = armstrongNumberInRange(num_range)
+print(result)
+```
+
 18. **Generating Multiplication Tables**  
  **Difficulty**: Easy  
  **Topics**: Basic Programming, Mathematical Computations  
