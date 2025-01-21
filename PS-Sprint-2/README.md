@@ -36,6 +36,19 @@ print(result)
    2 x 3 = 6   3 x 3 = 9   4 x 3 = 12  
    2 x 4 = 8   3 x 4 = 12  4 x 4 = 16  
    ```
+```python
+def generatingTable(start, end):
+    for i in range(1, 11):
+        num = start
+        while (num <= end):
+            print(num, "x", i, "=", num * i, end = "\t" )
+            num += 1
+        print()
+
+start = 2
+end = 4
+generatingTable(start, end)
+```
 
 3. **Calculating the Sum of a Series (1 + 1/2 + 1/3 + ... + 1/n)**  
    **Difficulty**: Medium  
