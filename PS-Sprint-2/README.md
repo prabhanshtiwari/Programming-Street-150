@@ -7,6 +7,22 @@
    Output: `6`  
    Explanation: Sum of digits is 1 + 2 + 3 = 6; sum of digits of 6 is 6 (which is a single digit).
 
+```python
+def sum_of_digits_until_zero(num):
+    while (num > 9):
+        sum = 0
+        while (num > 0):
+            digit = num % 10
+            sum += digit
+            num //= 10
+        num = sum
+    return num
+
+number = int(input("number = "))
+result = sum_of_digits_until_zero(number)
+print(result)
+```
+
 2. **Generating a Multiplication Table for a Range**  
    **Difficulty**: Easy  
    **Topics**: Arrays, Basic Programming  
