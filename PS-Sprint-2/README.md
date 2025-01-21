@@ -46,6 +46,28 @@ print(result)
    Output: `2.083333`  
    Explanation: Sum of the series is 1 + 1/2 + 1/3 + 1/4 ≈ 2.083333.
 
+```python
+def sumOfSeries(num):
+    sum = 0.0
+    i = 1
+    while(i <= num):
+        sum += 1/i
+        i += 1
+    return sum
+
+number = int(input("number = "))
+result = sumOfSeries(number)
+print(result)
+```
+```python
+import numpy as np
+
+num = 4
+harmonic_approx = np.log(num) + 0.57721 + (1 / (2 * num)) - (1 / (12 * num ** 2))
+print(harmonic_approx)
+```
+
+
 4. **Finding All Pairs of Elements in an Array that Add Up to a Given Sum**  
    **Difficulty**: Medium  
    **Topics**: Arrays, Hashing  
